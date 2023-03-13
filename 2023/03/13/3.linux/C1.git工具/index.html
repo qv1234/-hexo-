@@ -1,0 +1,578 @@
+<!DOCTYPE html><html lang="cn" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"><title>git工具 | 碧蓝幻想</title><meta name="author" content="阿尔托莉雅"><meta name="copyright" content="阿尔托莉雅"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="1.概念： Git是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。  Git是一个分布式版本控制工具，通常用来对软件开发过程中的源代码文件进行管理，通过Git仓库来存储和管理这些文件  Git仓库分为两种：  本地仓库：开发人员自己电脑上的Git仓库  远程仓库：远程服务器上的Git    功能：1.代码回溯，2.版本切换，3.多人协作，4.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="git工具">
+<meta property="og:url" content="http://example.com/2023/03/13/3.linux/C1.git%E5%B7%A5%E5%85%B7/index.html">
+<meta property="og:site_name" content="碧蓝幻想">
+<meta property="og:description" content="1.概念： Git是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。  Git是一个分布式版本控制工具，通常用来对软件开发过程中的源代码文件进行管理，通过Git仓库来存储和管理这些文件  Git仓库分为两种：  本地仓库：开发人员自己电脑上的Git仓库  远程仓库：远程服务器上的Git    功能：1.代码回溯，2.版本切换，3.多人协作，4.">
+<meta property="og:locale">
+<meta property="og:image" content="http://example.com/images/Otherwallpaper/avatar.png">
+<meta property="article:published_time" content="2023-03-13T12:32:23.845Z">
+<meta property="article:modified_time" content="2023-03-13T12:39:48.573Z">
+<meta property="article:author" content="阿尔托莉雅">
+<meta property="article:tag" content="Linux">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/images/Otherwallpaper/avatar.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2023/03/13/3.linux/C1.git%E5%B7%A5%E5%85%B7/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  }
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'git工具',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-03-13 20:39:48'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/images/Otherwallpaper/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">11</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">4</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">2</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/archive/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 工具</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/images/"><i class="fa-fw fas fa-image"></i><span> 图库</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/video/"><i class="fa-fw fas fa-video"></i><span> 视频</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/images/PCwallpaper/backgroud2.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="碧蓝幻想"><span class="site-name">碧蓝幻想</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/archive/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 工具</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/images/"><i class="fa-fw fas fa-image"></i><span> 图库</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/video/"><i class="fa-fw fas fa-video"></i><span> 视频</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">git工具</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2023-03-13T12:32:23.845Z" title="Created 2023-03-13 20:32:23">2023-03-13</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2023-03-13T12:39:48.573Z" title="Updated 2023-03-13 20:39:48">2023-03-13</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Linux/">Linux</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="git工具"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post View:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="1-概念："><a href="#1-概念：" class="headerlink" title="1.概念："></a>1.概念：</h2><ul>
+<li><p>Git是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。</p>
+</li>
+<li><p>Git是一个分布式版本控制工具，通常用来对软件开发过程中的源代码文件进行管理，通过Git仓库来存储和管理这些文件</p>
+</li>
+<li><p>Git仓库分为两种：</p>
+<ul>
+<li><p>本地仓库：开发人员自己电脑上的Git仓库</p>
+</li>
+<li><p>远程仓库：远程服务器上的Git</p>
+</li>
+</ul>
+</li>
+<li><p>功能：1.代码回溯，2.版本切换，3.多人协作，4.远程备份</p>
+</li>
+<li><p><strong>版本库：</strong>前面看到的.git隐藏文件夹就是版本库（<strong>本地仓库</strong>），版本库中存储了很多配置信息，日志信息和文件版本信息等</p>
+<p><img src="C:\Users\user\AppData\Roaming\Typora\typora-user-images\image-20220803083050202.png" alt="image-20220803083050202"></p>
+</li>
+<li><p><strong>工作区：</strong>包含.git文件夹的目录就是工作区，也称工作目录，主要用于存放开发的代码</p>
+<p><img src="C:\Users\user\AppData\Roaming\Typora\typora-user-images\image-20220803083036602.png" alt="image-20220803083036602"></p>
+</li>
+<li><p><strong>暂存区：</strong>.git文件夹中有很多文件，其中有一个index文件就是暂存区，也可以叫做stage。暂存区是一个临时保存修改文件的地方</p>
+<p><img src="C:\Users\user\AppData\Roaming\Typora\typora-user-images\image-20220803083021407.png" alt="image-20220803083021407"></p>
+</li>
+</ul>
+<h2 id="2-Git工作流程图："><a href="#2-Git工作流程图：" class="headerlink" title="2.Git工作流程图："></a>2.Git工作流程图：</h2><p><img src="C:\Users\user\AppData\Roaming\Typora\typora-user-images\image-20211224152340832.png" alt="image-20211224152340832"></p>
+<p><strong>命令如下：</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span> clone（克隆）: 从远程仓库中克隆代码到本地仓库</span><br><span class="line"><span class="number">2.</span> checkout （检出）:从本地仓库中检出一个仓库分支然后进行修订</span><br><span class="line"><span class="number">3.</span> add（添加）: 在提交前先将代码提交到暂存区</span><br><span class="line"><span class="number">4.</span> commit（提交）: 提交到本地仓库。本地仓库中保存修改的各个历史版本</span><br><span class="line"><span class="number">5.</span> fetch (抓取) ： 从远程库，抓取到本地仓库，不进行任何的合并动作，一般操作比较少。</span><br><span class="line"><span class="number">6.</span> pull (拉取) ： 从远程库拉到本地库，自动进行合并(merge)，然后放到到工作区，相当于</span><br><span class="line">fetch+merge</span><br><span class="line"><span class="number">7.</span> push（推送） : 修改完成后，需要和团队成员共享代码时，将代码推送到远程仓库</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-Git的安装："><a href="#3-Git的安装：" class="headerlink" title="3.Git的安装："></a>3.Git的安装：</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">链接：https://pan.baidu.com/s/1LSqwv-rRrzpGIYFabJD1zA </span><br><span class="line">提取码：abcd</span><br><span class="line"></span><br><span class="line">安装步骤：</span><br><span class="line"></span><br><span class="line">https://blog.csdn.net/wyg1973017714/article/details/105217864/</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-Git的一般配置："><a href="#4-Git的一般配置：" class="headerlink" title="4.Git的一般配置："></a>4.Git的一般配置：</h2><ul>
+<li><p>备注：</p>
+<ul>
+<li><p>Git GUI：Git提供的图形界面工具</p>
+</li>
+<li><p>Git Bash：Git提供的命令行工具</p>
+</li>
+<li><p>当安装Git后首先要做的事情是设置用户名称和email地址。这是非常重要的，因为每次Git提交都会使用</p>
+<p>该用户信息</p>
+</li>
+</ul>
+</li>
+<li><p><strong>基本配置</strong>：</p>
+<ol>
+<li><p>打开Git Bash</p>
+</li>
+<li><p>设置用户信息:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name <span class="string">&quot;用户名&quot;</span></span><br><span class="line">git config --global user.email <span class="string">&quot;邮箱地址&quot;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查看配置信息:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name</span><br><span class="line">git config --global user.email</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>不设置报错</p>
+</li>
+</ol>
+</li>
+<li><p><strong>为常用指令配置别名（可选）</strong></p>
+<ol>
+<li><p>打开gitBash,执行</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">touch ~/.bashrc</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在C:\Users\user下打开文件 .bashrc，输入如下内容：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#用于输出git提交日志 </span><br><span class="line">alias git-log=<span class="string">&#x27;git log --pretty=oneline --all --graph --abbrev-commit&#x27;</span> </span><br><span class="line">#用于输出当前目录所有文件及基本信息 </span><br><span class="line">alias ll=<span class="string">&#x27;ls -al&#x27;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>打开gitBash，执行</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source ~/.bashrc</span><br></pre></td></tr></table></figure></li>
+</ol>
+</li>
+<li><p><strong>解决GitBash乱码问题</strong></p>
+<ol>
+<li><p>打开GitBash执行下面命令</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global core.quotepath <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在git安装目录下 &#x2F;ect&#x2F;bash.bashrc 文件最后加入下面两行</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">export LANG=<span class="string">&quot;zh_CN.UTF-8&quot;</span> </span><br><span class="line">export LC_ALL=<span class="string">&quot;zh_CN.UTF-8&quot;</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+</li>
+</ul>
+<h2 id="5-获取本地仓库："><a href="#5-获取本地仓库：" class="headerlink" title="5.获取本地仓库："></a>5.获取本地仓库：</h2><ul>
+<li><p>要使用Git对我们的代码进行版本控制，首先需要获得本地仓库</p>
+<ol>
+<li><p>在电脑的任意位置创建一个空目录（例如test）作为我们的本地Git仓库</p>
+</li>
+<li><p>进入这个目录中，点击右键打开Git bash窗口</p>
+</li>
+<li><p>执行命令</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>如果创建成功后可在文件夹下看到隐藏的**.git目录**。</p>
+</li>
+</ol>
+</li>
+</ul>
+<h2 id="6-基本操作命令："><a href="#6-基本操作命令：" class="headerlink" title="6.基本操作命令："></a>6.基本操作命令：</h2><ul>
+<li><p>Git工作目录下对于文件的<strong>修改</strong>(增加、删除、更新)会存在几个状态，这些<strong>修改</strong>的状态会随着我们执行Git的命令而发生变化。</p>
+</li>
+<li><p>Git工作区中的文件存在两种状态：</p>
+<ul>
+<li>untracked（未跟踪）：未被纳入版本控制</li>
+<li>tracked（已跟踪）：被纳入版本控制</li>
+</ul>
+</li>
+<li><p>已跟踪的文件存在三种状态：1.Unmodified未修改状态，2.Modified已修改状态，3.Staged已暂存状态</p>
+</li>
+<li><p><img src="C:\Users\user\AppData\Roaming\Typora\typora-user-images\image-20211224162643741.png" alt="image-20211224162643741"></p>
+</li>
+<li><p>使用命令来控制这些状态之间的转换，其他操作</p>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>git status</td>
+<td>查看的文件修改的状态（暂存区、工作区）</td>
+</tr>
+<tr>
+<td>git add</td>
+<td>工作区 –&gt; 暂存区</td>
+</tr>
+<tr>
+<td>git reset</td>
+<td>将暂存区的文件取消暂存或者是切换到指定版本</td>
+</tr>
+<tr>
+<td>git commit</td>
+<td>暂存区 –&gt; 本地仓库</td>
+</tr>
+<tr>
+<td>git log</td>
+<td>查看日志</td>
+</tr>
+<tr>
+<td>git reflog</td>
+<td>查看已经删除的记录</td>
+</tr>
+</tbody></table>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1.添加单个文件到暂存区</span></span><br><span class="line">git add 单个文件名+后缀</span><br><span class="line"><span class="comment">//2.将所有修改文件添加到暂存区  </span></span><br><span class="line">git add .    </span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m <span class="string">&quot;注释内容&quot;</span>    <span class="comment">//提交暂存区内容到本地仓库的当前分支</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m <span class="string">&quot;注释内容&quot;</span> hello.txt  <span class="comment">//提交指定文件</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git log   <span class="comment">//查看提交记录</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset hello.txt   <span class="comment">//取消暂存</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset --hard commitID    <span class="comment">//commitID 可以使用 git-log 或 git log 指令查看</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>git log 参数</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>all</td>
+<td>显示所有分支</td>
+</tr>
+<tr>
+<td>pretty&#x3D;oneline</td>
+<td>将提交信息显示为一行</td>
+</tr>
+<tr>
+<td>abbrev-commit</td>
+<td>使得输出的commitId更简短</td>
+</tr>
+<tr>
+<td>graph</td>
+<td>以图的形式显示</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h2 id="7-远程仓库操作命令："><a href="#7-远程仓库操作命令：" class="headerlink" title="7.远程仓库操作命令："></a>7.远程仓库操作命令：</h2><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>git remote</td>
+<td>查看远程仓库</td>
+</tr>
+<tr>
+<td>git remote add &lt;远端名称&gt; &lt;仓库路径&gt;</td>
+<td>添加远程仓库，远端名称：默认是origin</td>
+</tr>
+<tr>
+<td>git clone &lt;仓库路径&gt; [本地目录]</td>
+<td>从远程仓库克隆</td>
+</tr>
+<tr>
+<td>git fetch [remote name] [branch name]</td>
+<td>从远程仓库抓取，将仓库里的更新都抓取到本地，不会进行合并</td>
+</tr>
+<tr>
+<td>git pull  [remote name] [branch name]</td>
+<td>从远程仓库拉取，将远端仓库的修改拉到本地并自动进行合并</td>
+</tr>
+<tr>
+<td>git push &lt;远端名称&gt; &lt;本地分支名&gt;</td>
+<td>推送到远程仓库</td>
+</tr>
+<tr>
+<td>git branch -vv</td>
+<td>查看本地分支和远程分支的对应关系</td>
+</tr>
+</tbody></table>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote    <span class="comment">//查看远端名称</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote  -v   <span class="comment">//查看远端名称，url，等</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin git<span class="meta">@gitee</span>.com:blue-fantasy/git_test.git   <span class="comment">//建立连接</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone git<span class="meta">@gitee</span>.com:blue-fantasy/git_test.git [本地目录]</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//克隆指定分支的代码到当前目录</span></span><br><span class="line">git clone -b product git<span class="meta">@gitee</span>.com:blue-fantasy/git_test.git </span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin master    <span class="comment">//origin：本地分支，master远端分支</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push -f origin master   <span class="comment">//-f 表示强制覆盖</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push --set-upstream origin master:master   <span class="comment">//--set-upstream：推送到远端的同时并且建立起和远端分支的关联关系</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push   <span class="comment">//当前分支已经和远端分支关联</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="8-分支命令："><a href="#8-分支命令：" class="headerlink" title="8.分支命令："></a>8.分支命令：</h2><ul>
+<li><p>几乎所有的版本控制系统都以某种形式支持分支。 使用分支意味着你可以把你的工作从开发主线上分离</p>
+<p>开来进行重大的Bug修改、开发新的功能，以免影响开发主线。</p>
+</li>
+<li><p>分支命令：</p>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>git branch</td>
+<td>查看本地分支</td>
+</tr>
+<tr>
+<td>git branch [ name ]</td>
+<td>创建本地分支</td>
+</tr>
+<tr>
+<td>git branch -d [ name ]</td>
+<td>删除分支时，需要做各种检查(不能删除当前分支，只能删除其他分支)</td>
+</tr>
+<tr>
+<td>git branch -D [ name ]</td>
+<td>不做任何检查，强制删除 (不能删除当前分支，只能删除其他分支)</td>
+</tr>
+<tr>
+<td>git checkout [ name ]</td>
+<td>切换分支</td>
+</tr>
+<tr>
+<td>git checkout -b [ name ]</td>
+<td>创建并切换分支</td>
+</tr>
+<tr>
+<td>git push [ shortName ] [ name ]</td>
+<td>推送至远程仓库分支</td>
+</tr>
+<tr>
+<td>git merge [ name ]</td>
+<td>合并分支，将其他分支合并到当前分支</td>
+</tr>
+</tbody></table>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">  </span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="9-解决冲突"><a href="#9-解决冲突" class="headerlink" title="9.解决冲突:"></a>9.解决冲突:</h2><ul>
+<li><p>当两个分支上对文件的修改可能会存在冲突，例如同时修改了同一个文件的同一行，这时就需要手动解</p>
+<p>决冲突，解决冲突步骤如下：</p>
+<ol>
+<li>处理文件中冲突的地方</li>
+<li>将解决完冲突的文件加入暂存区(add)</li>
+<li>提交到仓库(commit)</li>
+</ol>
+</li>
+<li><p>冲突部分的内容处理如下所示：</p>
+<p><img src="C:\Users\user\AppData\Roaming\Typora\typora-user-images\image-20211225093914373.png" alt="image-20211225093914373"></p>
+</li>
+</ul>
+<h2 id="10-开发中分支使用原则与流程"><a href="#10-开发中分支使用原则与流程" class="headerlink" title="10.开发中分支使用原则与流程:"></a>10.开发中分支使用原则与流程:</h2><ul>
+<li><p>几乎所有的版本控制系统都以某种形式支持分支。 使用分支意味着你可以把你的工作从开发主线上分离</p>
+<p>开来进行重大的Bug修改、开发新的功能，以免影响开发主线</p>
+</li>
+<li><p>在开发中，一般有如下分支使用原则与流程：</p>
+<ul>
+<li><p><strong>master （生产） 分支</strong></p>
+<p>线上分支，主分支，中小规模项目作为线上运行的应用对应的分支；</p>
+</li>
+<li><p><strong>develop（开发）分支</strong></p>
+<p>是从master创建的分支，一般作为开发部门的主要开发分支，如果没有其他并行开发不同期上线</p>
+<p>要求，都可以在此版本进行开发，阶段开发完成后，需要是合并到master分支,准备上线。</p>
+</li>
+<li><p><strong>feature&#x2F;xxxx分支</strong></p>
+<p>从develop创建的分支，一般是同期并行开发，但不同期上线时创建的分支，分支上的研发任务完</p>
+<p>成后合并到develop分支	</p>
+</li>
+<li><p><strong>hotfifix&#x2F;xxxx分支</strong></p>
+<p>从master派生的分支，一般作为<strong>线上bug修复使用</strong>，修复完成后需要合并到master、test、</p>
+<p>develop分支</p>
+</li>
+<li><p>还有一些其他分支，在此不再详述，例如test分支（用于代码测试）、pre分支（预上线分支）等</p>
+<p>等。</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="11-标签操作命令："><a href="#11-标签操作命令：" class="headerlink" title="11.标签操作命令："></a>11.标签操作命令：</h2><ul>
+<li><p>Git中的标签，指的是某个分支某个特定时间点的状态（快照），通过标签，可以很方便的切换到标记时的状态</p>
+</li>
+<li><p>操作命令：</p>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>git tag</td>
+<td>列出已有的标签</td>
+</tr>
+<tr>
+<td>git tag [ name ]</td>
+<td>创建标签</td>
+</tr>
+<tr>
+<td>git push [ shortName ] [ name ]</td>
+<td>将标签推送至远程仓库</td>
+</tr>
+<tr>
+<td>git checkout -b [ branch ] [ name ]</td>
+<td>检出标签</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h2 id="12-常用的托管服务："><a href="#12-常用的托管服务：" class="headerlink" title="12.常用的托管服务："></a>12.<strong>常用的托管服务</strong>：</h2><ul>
+<li><p>前面我们已经知道了Git中存在两种类型的仓库，即本地仓库和远程仓库。那么我们如何搭建Git远程仓库 </p>
+<p>呢？我们可以借助互联网上提供的一些代码托管服务来实现，其中比较常用的有GitHub、码云、GitLab等。</p>
+</li>
+<li><p><strong>gitHub</strong>（ 地址：<a target="_blank" rel="noopener" href="https://github.com/">https://github.com/</a> ）是一个面向开源及私有软件项目的托管平台，因为只支持 </p>
+<p>Git 作为唯一的版本库格式进行托管，故名gitHub </p>
+</li>
+<li><p><strong>码云</strong>（地址： <a target="_blank" rel="noopener" href="https://gitee.com/">https://gitee.com/</a> ）是国内的一个代码托管平台，由于<strong>服务器在国内</strong>，所以相比于 </p>
+<p>GitHub，码云速度会更快 </p>
+</li>
+<li><p><strong>GitLab</strong> （地址： <a target="_blank" rel="noopener" href="https://about.gitlab.com/">https://about.gitlab.com/</a> ）是一个用于仓库管理系统的开源项目，使用Git作 </p>
+<p>为代码管理工具，并在此基础上搭建起来的web服务,一般用于在企业、学校等内部网络搭建git私服。</p>
+</li>
+</ul>
+<h2 id="13-配置SSH公钥"><a href="#13-配置SSH公钥" class="headerlink" title="13.配置SSH公钥:"></a>13.配置SSH公钥:</h2><ul>
+<li><p>生成SSH公钥-步骤：</p>
+<ul>
+<li><pre><code class="java">ssh-keygen -t rsa
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">  - 不断回车，如果公钥已经存在，则自动覆盖</span><br><span class="line"></span><br><span class="line">- Gitee设置账户共公钥</span><br><span class="line"></span><br><span class="line">  - 获取公钥</span><br><span class="line"></span><br><span class="line">    ```java</span><br><span class="line">    cat ~/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure>
+</code></pre>
+</li>
+<li><p><img src="C:\Users\user\AppData\Roaming\Typora\typora-user-images\image-20211225164351696.png" alt="image-20211225164351696"></p>
+</li>
+<li><p>验证是否配置成功</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git<span class="meta">@gitee</span>.com</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+<h2 id="14-在Idea中操作Git："><a href="#14-在Idea中操作Git：" class="headerlink" title="14.在Idea中操作Git："></a>14.在Idea中操作Git：</h2><ul>
+<li><p>场景：本地已经有一个项目，但是并不是git项目，我们需要将这个放到码云的仓库里，和其他开发人员</p>
+<p>继续一起协作开发</p>
+</li>
+<li><p>初始化本地仓库，将此项目设置为本地仓库</p>
+<p><img src="C:\Users\user\AppData\Roaming\Typora\typora-user-images\image-20211225190826507.png" alt="image-20211225190826507"></p>
+</li>
+<li><p>设置远程仓库1.Name：远程仓库的名称，2.URL：远程仓库的地址</p>
+<p><img src="C:\Users\user\AppData\Roaming\Typora\typora-user-images\image-20211225194141712.png" alt="image-20211225194141712"></p>
+</li>
+<li><p>关闭代码检查：</p>
+<p><img src="C:\Users\user\AppData\Roaming\Typora\typora-user-images\image-20220803124844798.png" alt="image-20220803124844798"></p>
+</li>
+<li><p>推送到远程仓库，1.master本地仓库分支，2.dev远程仓库名称，3.development远程仓库分支</p>
+<p><img src="C:\Users\user\AppData\Roaming\Typora\typora-user-images\image-20220803125125742.png" alt="image-20220803125125742"></p>
+</li>
+<li><p>克隆远程仓库到本地，上方Git——&gt;clone</p>
+<p><img src="C:\Users\user\AppData\Roaming\Typora\typora-user-images\image-20211225195630631.png" alt="image-20211225195630631"></p>
+</li>
+<li><p>查看或是设置分支：</p>
+<p><img src="C:\Users\user\AppData\Roaming\Typora\typora-user-images\image-20220803130104915.png" alt="image-20220803130104915"></p>
+</li>
+<li><p>推送当前分支到远程仓库：</p>
+<p><img src="C:\Users\user\AppData\Roaming\Typora\typora-user-images\image-20220803130810306.png" alt="image-20220803130810306"></p>
+</li>
+<li><p>切换成其他分支：</p>
+<p><img src="C:\Users\user\AppData\Roaming\Typora\typora-user-images\image-20220803130931427.png" alt="image-20220803130931427"></p>
+</li>
+<li><p>合并选中的其他分支到当前分支：</p>
+<p><img src="C:\Users\user\AppData\Roaming\Typora\typora-user-images\image-20220803131146944.png" alt="image-20220803131146944"></p>
+</li>
+</ul>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="http://example.com">阿尔托莉雅</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="http://example.com/2023/03/13/3.linux/C1.git%E5%B7%A5%E5%85%B7/">http://example.com/2023/03/13/3.linux/C1.git%E5%B7%A5%E5%85%B7/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Linux/">Linux</a></div><div class="post_share"><div class="social-share" data-image="/images/Otherwallpaper/avatar.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2023/03/13/3.linux/D1.Ansible%E8%87%AA%E5%8A%A8%E5%8C%96%E8%BF%90%E7%BB%B4%E5%B7%A5%E5%85%B7/" title="Ansible基础"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">Previous Post</div><div class="prev_info">Ansible基础</div></div></a></div><div class="next-post pull-right"><a href="/2023/03/13/3.linux/B1.Docker%E5%AE%B9%E5%99%A8/" title="Docker容器"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">Docker容器</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>Related Articles</span></div><div class="relatedPosts-list"><div><a href="/2023/03/13/3.linux/A1.linux%E5%9F%BA%E7%A1%80/" title="Linux基础"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-03-13</div><div class="title">Linux基础</div></div></a></div><div><a href="/2023/03/13/3.linux/A2.Linux%E5%88%9D%E7%BA%A7%E5%91%BD%E4%BB%A4/" title="Linux初级命令"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-03-13</div><div class="title">Linux初级命令</div></div></a></div><div><a href="/2023/03/13/3.linux/A3.Linux%E4%B8%AD%E7%BA%A7%E5%91%BD%E4%BB%A4/" title="Linux中级命令"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-03-13</div><div class="title">Linux中级命令</div></div></a></div><div><a href="/2023/03/13/3.linux/A4.Shell%E8%84%9A%E6%9C%AC/" title="Shell脚本"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-03-13</div><div class="title">Shell脚本</div></div></a></div><div><a href="/2023/03/13/3.linux/B1.Docker%E5%AE%B9%E5%99%A8/" title="Docker容器"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-03-13</div><div class="title">Docker容器</div></div></a></div><div><a href="/2023/03/13/3.linux/D1.Ansible%E8%87%AA%E5%8A%A8%E5%8C%96%E8%BF%90%E7%BB%B4%E5%B7%A5%E5%85%B7/" title="Ansible基础"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-03-13</div><div class="title">Ansible基础</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/images/Otherwallpaper/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">阿尔托莉雅</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">11</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">4</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">2</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://toscode.gitee.com/blue-fantasy" target="_blank" title="Gitee"><i class="fab fa-github"></i></a><a class="social-icon" href="/1095322098@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Catalog</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E6%A6%82%E5%BF%B5%EF%BC%9A"><span class="toc-number">1.</span> <span class="toc-text">1.概念：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-Git%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B%E5%9B%BE%EF%BC%9A"><span class="toc-number">2.</span> <span class="toc-text">2.Git工作流程图：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-Git%E7%9A%84%E5%AE%89%E8%A3%85%EF%BC%9A"><span class="toc-number">3.</span> <span class="toc-text">3.Git的安装：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-Git%E7%9A%84%E4%B8%80%E8%88%AC%E9%85%8D%E7%BD%AE%EF%BC%9A"><span class="toc-number">4.</span> <span class="toc-text">4.Git的一般配置：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E8%8E%B7%E5%8F%96%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93%EF%BC%9A"><span class="toc-number">5.</span> <span class="toc-text">5.获取本地仓库：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4%EF%BC%9A"><span class="toc-number">6.</span> <span class="toc-text">6.基本操作命令：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4%EF%BC%9A"><span class="toc-number">7.</span> <span class="toc-text">7.远程仓库操作命令：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-%E5%88%86%E6%94%AF%E5%91%BD%E4%BB%A4%EF%BC%9A"><span class="toc-number">8.</span> <span class="toc-text">8.分支命令：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-%E8%A7%A3%E5%86%B3%E5%86%B2%E7%AA%81"><span class="toc-number">9.</span> <span class="toc-text">9.解决冲突:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-%E5%BC%80%E5%8F%91%E4%B8%AD%E5%88%86%E6%94%AF%E4%BD%BF%E7%94%A8%E5%8E%9F%E5%88%99%E4%B8%8E%E6%B5%81%E7%A8%8B"><span class="toc-number">10.</span> <span class="toc-text">10.开发中分支使用原则与流程:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-%E6%A0%87%E7%AD%BE%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4%EF%BC%9A"><span class="toc-number">11.</span> <span class="toc-text">11.标签操作命令：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12-%E5%B8%B8%E7%94%A8%E7%9A%84%E6%89%98%E7%AE%A1%E6%9C%8D%E5%8A%A1%EF%BC%9A"><span class="toc-number">12.</span> <span class="toc-text">12.常用的托管服务：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#13-%E9%85%8D%E7%BD%AESSH%E5%85%AC%E9%92%A5"><span class="toc-number">13.</span> <span class="toc-text">13.配置SSH公钥:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#14-%E5%9C%A8Idea%E4%B8%AD%E6%93%8D%E4%BD%9CGit%EF%BC%9A"><span class="toc-number">14.</span> <span class="toc-text">14.在Idea中操作Git：</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/03/13/4.%E6%95%B0%E6%8D%AE%E5%BA%93/B3.NoSQL%E6%95%B0%E6%8D%AE%E5%BA%93%20-%20MongDB/" title="NoSQL篇-MongDB数据库">NoSQL篇-MongDB数据库</a><time datetime="2023-03-13T12:32:38.445Z" title="Created 2023-03-13 20:32:38">2023-03-13</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/03/13/4.%E6%95%B0%E6%8D%AE%E5%BA%93/B2.NoSQL%E6%95%B0%E6%8D%AE%E5%BA%93%20-%20Redis/" title="NoSQL篇-Redis数据库">NoSQL篇-Redis数据库</a><time datetime="2023-03-13T12:32:38.441Z" title="Created 2023-03-13 20:32:38">2023-03-13</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/03/13/4.%E6%95%B0%E6%8D%AE%E5%BA%93/A1.MySQL-%E6%AC%A7%E9%B9%8F%E7%AF%87/" title="SQL篇-MySQL数据库">SQL篇-MySQL数据库</a><time datetime="2023-03-13T12:32:38.437Z" title="Created 2023-03-13 20:32:38">2023-03-13</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/03/13/3.linux/D2.Ansible%E5%89%A7%E6%9C%AC/" title="Ansible">Ansible</a><time datetime="2023-03-13T12:32:23.866Z" title="Created 2023-03-13 20:32:23">2023-03-13</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/03/13/3.linux/D1.Ansible%E8%87%AA%E5%8A%A8%E5%8C%96%E8%BF%90%E7%BB%B4%E5%B7%A5%E5%85%B7/" title="Ansible基础">Ansible基础</a><time datetime="2023-03-13T12:32:23.861Z" title="Created 2023-03-13 20:32:23">2023-03-13</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By 阿尔托莉雅</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

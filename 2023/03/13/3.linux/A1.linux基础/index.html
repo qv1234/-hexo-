@@ -1,0 +1,249 @@
+<!DOCTYPE html><html lang="cn" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"><title>Linux基础 | 碧蓝幻想</title><meta name="author" content="阿尔托莉雅"><meta name="copyright" content="阿尔托莉雅"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="1.Linux的概念： Linux，全称GNU&#x2F;Linux，是一种免费使用和自由传播的类UNIX操作系统，其内核由林纳斯·托瓦兹在赫尔辛基大学上学时出于个人爱好而编写的 Linux 是一套免费使用和自由传播的类 Unix 操作系统，是一个基于 POSIX 和 UNIX 的多用户、多任务、支持多线程和多 CPU 的操作系统 Linux的组成：1.内核  2.shell  3.文件系统  4">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux基础">
+<meta property="og:url" content="http://example.com/2023/03/13/3.linux/A1.linux%E5%9F%BA%E7%A1%80/index.html">
+<meta property="og:site_name" content="碧蓝幻想">
+<meta property="og:description" content="1.Linux的概念： Linux，全称GNU&#x2F;Linux，是一种免费使用和自由传播的类UNIX操作系统，其内核由林纳斯·托瓦兹在赫尔辛基大学上学时出于个人爱好而编写的 Linux 是一套免费使用和自由传播的类 Unix 操作系统，是一个基于 POSIX 和 UNIX 的多用户、多任务、支持多线程和多 CPU 的操作系统 Linux的组成：1.内核  2.shell  3.文件系统  4">
+<meta property="og:locale">
+<meta property="og:image" content="http://example.com/images/Otherwallpaper/avatar.png">
+<meta property="article:published_time" content="2023-03-13T12:32:23.714Z">
+<meta property="article:modified_time" content="2023-03-13T12:37:53.025Z">
+<meta property="article:author" content="阿尔托莉雅">
+<meta property="article:tag" content="Linux">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/images/Otherwallpaper/avatar.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2023/03/13/3.linux/A1.linux%E5%9F%BA%E7%A1%80/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  }
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Linux基础',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-03-13 20:37:53'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/images/Otherwallpaper/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">11</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">4</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">2</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/archive/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 工具</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/images/"><i class="fa-fw fas fa-image"></i><span> 图库</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/video/"><i class="fa-fw fas fa-video"></i><span> 视频</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/images/PCwallpaper/backgroud2.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="碧蓝幻想"><span class="site-name">碧蓝幻想</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/archive/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 工具</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/images/"><i class="fa-fw fas fa-image"></i><span> 图库</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/video/"><i class="fa-fw fas fa-video"></i><span> 视频</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Linux基础</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2023-03-13T12:32:23.714Z" title="Created 2023-03-13 20:32:23">2023-03-13</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2023-03-13T12:37:53.025Z" title="Updated 2023-03-13 20:37:53">2023-03-13</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Linux/">Linux</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Linux基础"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post View:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="1-Linux的概念："><a href="#1-Linux的概念：" class="headerlink" title="1.Linux的概念："></a>1.Linux的概念：</h2><ul>
+<li>Linux，全称GNU&#x2F;Linux，是一种免费使用和自由传播的<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E7%B1%BBUNIX/9032872">类UNIX</a>操作系统，其<strong>内核</strong>由<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%9E%97%E7%BA%B3%E6%96%AF%C2%B7%E6%9C%AC%E7%BA%B3%E7%AC%AC%E5%85%8B%E7%89%B9%C2%B7%E6%89%98%E7%93%A6%E5%85%B9/1034429">林纳斯·托瓦兹</a>在赫尔辛基大学上学时出于个人爱好而编写的</li>
+<li>Linux 是一套免费使用和自由传播的类 Unix 操作系统，是一个基于 POSIX 和 UNIX 的多用户、多任务、支持多线程和多 CPU 的操作系统</li>
+<li>Linux的组成：1.内核  2.shell  3.文件系统  4.Linux应用系统</li>
+<li>Linux操作系统由三部分组成：1.内核  2.Shell  3.文件结构</li>
+<li>Linux文件系统由bootfs和rootfs两部分组成</li>
+<li><strong>计算机的组成：</strong>1.控制器，2.计算器，3.存储器，4.输入设备，5.输出设备</li>
+<li><strong>操作系统内核的功能</strong>：1.系统调用接口，2.程序管理，3.内存管理，4.文件系统管理，5.设备驱动</li>
+<li>登录系统的方式有：图形化登录和虚拟控制台登录</li>
+<li>Linux的特点：1.开放性  2.多用户  3.多任务  4.良好的用户界面  5.设备独立性  6.丰富的网络功能  7.可靠的系统安全  8.良好的可移植性</li>
+</ul>
+<h2 id="2-为什么需要使用Linux操作系统："><a href="#2-为什么需要使用Linux操作系统：" class="headerlink" title="2.为什么需要使用Linux操作系统："></a>2.为什么需要使用Linux操作系统：</h2><ul>
+<li><strong>性能问题</strong>：window服务器操作系统不如linux高</li>
+<li><strong>稳定性问题</strong>：<ul>
+<li>底层架构：Linux更加稳定，其开机时间可以达到好几年不关机</li>
+<li>开源：因为开源，人人都可以看到源代码，就可以为其提供自己的补丁，补丁可以提高稳定性和安全性</li>
+</ul>
+</li>
+<li><strong>安全性问题</strong>：Linux操作系统，相对于windows操作系统要更加安全</li>
+<li><strong>远程管理问题</strong>：Windows不及Linux操作高效。</li>
+<li>服务器价格昂贵，需要对资源进行充分利用，充分把计算机资源用到项目上（访问并发，性能），而不是把资源浪费在图形化界面或者方便程度上</li>
+</ul>
+<h2 id="3-Linux系统文件分类及目录结构："><a href="#3-Linux系统文件分类及目录结构：" class="headerlink" title="3.Linux系统文件分类及目录结构："></a>3.Linux系统文件分类及目录结构：</h2><h3 id="1-文件分类："><a href="#1-文件分类：" class="headerlink" title="1.文件分类："></a>1.文件分类：</h3><ul>
+<li>Linux下的文件类型有5种：<ol>
+<li><strong>普通文件 ：</strong>最常使用的一类文件，其特点是不包含有文件系统的结构信息，如：图形文件，数据文件，文档文件，声音文件等。这种类型的文件按其内部结构又可细分为文本文件和二进制文件</li>
+<li><strong>目录文件 ：</strong>用于存放文件名及其相关信息的文件。它是内核组织文件系统的基本节点</li>
+<li><strong>设备文件 ：</strong>使得Linux系统系统可以十分方便地访问外部设备。通常Linux系统将设备文件放在 &#x2F;dev 目录下。根据访问数据类型的方式不同，设备文件又可以分为块设备和字符设备文件</li>
+<li><strong>链接文件 ：</strong>是一种特殊的文件，实际上是指向一个真实存在的文件链接，类似于window下的快捷方式。根据链接文件的不同，它又可以细分为硬链接文件和符号链接文件<ul>
+<li><strong>软链接</strong>：例如Windows的快捷方式，如果原始文件被删除，所有指向它的符号链接也就都被破坏了。软链接有自己的node，是linux特殊文件的一种，作为一个文件，它的数据是它所连接的<strong>文件的路径</strong>。符号链接可以跨越文件系统，也可以为目录建立</li>
+<li><strong>硬链接</strong>：只能引用同一文件系统中的文件。它引用的是文件在文件系统中的物理索引（也称为inode）当移动或者删除原始文件时，硬链接不会被破坏，因为它所引用的是文件的物理数据而不是文件在件结构中的位置。</li>
+</ul>
+</li>
+<li><strong>管道文件：</strong>主要用于不同进程间的信息传递</li>
+</ol>
+</li>
+</ul>
+<h3 id="2-目录结构："><a href="#2-目录结构：" class="headerlink" title="2.目录结构："></a>2.目录结构：</h3><p><img src="C:\Users\user\AppData\Roaming\Typora\typora-user-images\image-20220214171715837.png" alt="image-20220214171715837"></p>
+<ul>
+<li><strong>Bin</strong>：全称binary，含义是二进制，该目录中存储的都是一些二进制文件，文件都是可以被运行的</li>
+<li><strong>boot：</strong>存放很多linux系统把内核映像和其他一些和启动有关的文件</li>
+<li><strong>Dev</strong>：该目录中主要存放的是外接设备，例如盘，其他的光盘等。在其中的外接设备是不能直接被使用的，需要挂载（类似windows下的分配符）</li>
+<li><strong>Etc</strong>：该目录主要存储一些配置文件</li>
+<li><strong>Home</strong>：表示 “家” ，表示除了root用户以外其他用户的家目录，类似于windows下的User 下的用户目录</li>
+<li><strong>Proc</strong>：process表示进程，该目录中存储的是Linux运行时候的进程</li>
+<li><strong>Root</strong>：该目录是root用户自己的家目录</li>
+<li><strong>Sbin</strong>：全称super binary，该目录也是存储一些可以被执行的二进制文件，但是必须得有super权限的用户才能执行</li>
+<li><strong>Tmp</strong>：表示 “临时” 的，当系统运行时产生的临时文件会在这个目录存着</li>
+<li><strong>Usr</strong>：存放的是用户自己安装的软件。类似于windows下的program files</li>
+<li><strong>Var</strong>：存放的程序 &#x2F; 系统的日志文件的目录</li>
+<li><strong>Mnt</strong>：当外接设备需要挂载的时候，就需要挂载到</li>
+</ul>
+<h3 id="3-文件颜色："><a href="#3-文件颜色：" class="headerlink" title="3.文件颜色："></a>3.文件颜色：</h3><ul>
+<li>1.蓝色表示目录；2.绿色表示可执行文件；3.红色表示压缩文件；4.浅蓝色表示链接文件；5.白色表示其他文件；6.黄色是设备文件。</li>
+</ul>
+<h2 id="4-Linux系统的启动过程："><a href="#4-Linux系统的启动过程：" class="headerlink" title="4.Linux系统的启动过程："></a>4.Linux系统的启动过程：</h2><ol>
+<li>开启电源：</li>
+<li>开机自检：</li>
+<li><strong>内核的引导：</strong>当计算机打开电源后，首先是BIOS开机自检，按照BIOS中设置的启动设备（通常是硬盘）来启动</li>
+<li><strong>运行 init：</strong>init 进程是系统所有进程的起点，你可以把它比拟成系统所有进程的老祖宗，没有这个进程，系统中任何进程都不会启动</li>
+<li><strong>系统初始化</strong>：</li>
+<li><strong>建立终端：</strong></li>
+<li><strong>用户登录系统：</strong></li>
+</ol>
+<h2 id="5-相对路径和绝对路径："><a href="#5-相对路径和绝对路径：" class="headerlink" title="5.相对路径和绝对路径："></a>5.相对路径和绝对路径：</h2><ul>
+<li><p>相对路径：相对首先得有一个参照物（一般就是当前的工作路径）</p>
+<p>“ .&#x2F; “【表示当前目录下】，” ..&#x2F; “ 【上一级目录下】</p>
+</li>
+<li><p>绝对路径：绝对路径不需要参照物，直接从根 ” &#x2F; “开始寻找对应路径</p>
+</li>
+</ul>
+<h2 id="6-虚拟机软件："><a href="#6-虚拟机软件：" class="headerlink" title="6.虚拟机软件："></a>6.虚拟机软件：</h2><ul>
+<li>虚拟机，因想模拟出一个真实的电脑环境，碍于使用真机安装代价太大，因此而诞生的一款可以模拟操作系统运行的软件</li>
+<li>虚拟机目前有2个比较有名的产品：VMware出品的VMware WorkStation，Oracle出品的Virtual Box。</li>
+</ul>
+<h2 id="7-使用VMware备份操作系统："><a href="#7-使用VMware备份操作系统：" class="headerlink" title="7.使用VMware备份操作系统："></a>7.使用VMware备份操作系统：</h2><ul>
+<li>在VMware中备份方式有2种：快照，克隆。</li>
+<li><strong>快照</strong>：<ul>
+<li>又称还原点，就是保存在拍快照时候的系统的状态（包含了所有的内容），在后期的时候随时可以恢复【侧重在于短期备份，需要频繁备份的时候可以使用快照，做快照的时候虚拟的操作系统一般处于开启状态】</li>
+</ul>
+</li>
+<li><strong>克隆</strong>：<ul>
+<li>就是复制的意思：【侧重长期备份，做克隆的时候是必须得关闭】</li>
+</ul>
+</li>
+</ul>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="http://example.com">阿尔托莉雅</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="http://example.com/2023/03/13/3.linux/A1.linux%E5%9F%BA%E7%A1%80/">http://example.com/2023/03/13/3.linux/A1.linux%E5%9F%BA%E7%A1%80/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Linux/">Linux</a></div><div class="post_share"><div class="social-share" data-image="/images/Otherwallpaper/avatar.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-full"><a href="/2023/03/13/3.linux/A2.Linux%E5%88%9D%E7%BA%A7%E5%91%BD%E4%BB%A4/" title="Linux初级命令"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">Previous Post</div><div class="prev_info">Linux初级命令</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>Related Articles</span></div><div class="relatedPosts-list"><div><a href="/2023/03/13/3.linux/A2.Linux%E5%88%9D%E7%BA%A7%E5%91%BD%E4%BB%A4/" title="Linux初级命令"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-03-13</div><div class="title">Linux初级命令</div></div></a></div><div><a href="/2023/03/13/3.linux/A3.Linux%E4%B8%AD%E7%BA%A7%E5%91%BD%E4%BB%A4/" title="Linux中级命令"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-03-13</div><div class="title">Linux中级命令</div></div></a></div><div><a href="/2023/03/13/3.linux/A4.Shell%E8%84%9A%E6%9C%AC/" title="Shell脚本"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-03-13</div><div class="title">Shell脚本</div></div></a></div><div><a href="/2023/03/13/3.linux/B1.Docker%E5%AE%B9%E5%99%A8/" title="Docker容器"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-03-13</div><div class="title">Docker容器</div></div></a></div><div><a href="/2023/03/13/3.linux/C1.git%E5%B7%A5%E5%85%B7/" title="git工具"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-03-13</div><div class="title">git工具</div></div></a></div><div><a href="/2023/03/13/3.linux/D1.Ansible%E8%87%AA%E5%8A%A8%E5%8C%96%E8%BF%90%E7%BB%B4%E5%B7%A5%E5%85%B7/" title="Ansible基础"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-03-13</div><div class="title">Ansible基础</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/images/Otherwallpaper/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">阿尔托莉雅</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">11</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">4</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">2</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://toscode.gitee.com/blue-fantasy" target="_blank" title="Gitee"><i class="fab fa-github"></i></a><a class="social-icon" href="/1095322098@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Catalog</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-Linux%E7%9A%84%E6%A6%82%E5%BF%B5%EF%BC%9A"><span class="toc-number">1.</span> <span class="toc-text">1.Linux的概念：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9C%80%E8%A6%81%E4%BD%BF%E7%94%A8Linux%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%EF%BC%9A"><span class="toc-number">2.</span> <span class="toc-text">2.为什么需要使用Linux操作系统：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-Linux%E7%B3%BB%E7%BB%9F%E6%96%87%E4%BB%B6%E5%88%86%E7%B1%BB%E5%8F%8A%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84%EF%BC%9A"><span class="toc-number">3.</span> <span class="toc-text">3.Linux系统文件分类及目录结构：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E6%96%87%E4%BB%B6%E5%88%86%E7%B1%BB%EF%BC%9A"><span class="toc-number">3.1.</span> <span class="toc-text">1.文件分类：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84%EF%BC%9A"><span class="toc-number">3.2.</span> <span class="toc-text">2.目录结构：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E6%96%87%E4%BB%B6%E9%A2%9C%E8%89%B2%EF%BC%9A"><span class="toc-number">3.3.</span> <span class="toc-text">3.文件颜色：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-Linux%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%90%AF%E5%8A%A8%E8%BF%87%E7%A8%8B%EF%BC%9A"><span class="toc-number">4.</span> <span class="toc-text">4.Linux系统的启动过程：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E7%9B%B8%E5%AF%B9%E8%B7%AF%E5%BE%84%E5%92%8C%E7%BB%9D%E5%AF%B9%E8%B7%AF%E5%BE%84%EF%BC%9A"><span class="toc-number">5.</span> <span class="toc-text">5.相对路径和绝对路径：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-%E8%99%9A%E6%8B%9F%E6%9C%BA%E8%BD%AF%E4%BB%B6%EF%BC%9A"><span class="toc-number">6.</span> <span class="toc-text">6.虚拟机软件：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-%E4%BD%BF%E7%94%A8VMware%E5%A4%87%E4%BB%BD%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%EF%BC%9A"><span class="toc-number">7.</span> <span class="toc-text">7.使用VMware备份操作系统：</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/03/13/4.%E6%95%B0%E6%8D%AE%E5%BA%93/B3.NoSQL%E6%95%B0%E6%8D%AE%E5%BA%93%20-%20MongDB/" title="NoSQL篇-MongDB数据库">NoSQL篇-MongDB数据库</a><time datetime="2023-03-13T12:32:38.445Z" title="Created 2023-03-13 20:32:38">2023-03-13</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/03/13/4.%E6%95%B0%E6%8D%AE%E5%BA%93/B2.NoSQL%E6%95%B0%E6%8D%AE%E5%BA%93%20-%20Redis/" title="NoSQL篇-Redis数据库">NoSQL篇-Redis数据库</a><time datetime="2023-03-13T12:32:38.441Z" title="Created 2023-03-13 20:32:38">2023-03-13</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/03/13/4.%E6%95%B0%E6%8D%AE%E5%BA%93/A1.MySQL-%E6%AC%A7%E9%B9%8F%E7%AF%87/" title="SQL篇-MySQL数据库">SQL篇-MySQL数据库</a><time datetime="2023-03-13T12:32:38.437Z" title="Created 2023-03-13 20:32:38">2023-03-13</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/03/13/3.linux/D2.Ansible%E5%89%A7%E6%9C%AC/" title="Ansible">Ansible</a><time datetime="2023-03-13T12:32:23.866Z" title="Created 2023-03-13 20:32:23">2023-03-13</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/03/13/3.linux/D1.Ansible%E8%87%AA%E5%8A%A8%E5%8C%96%E8%BF%90%E7%BB%B4%E5%B7%A5%E5%85%B7/" title="Ansible基础">Ansible基础</a><time datetime="2023-03-13T12:32:23.861Z" title="Created 2023-03-13 20:32:23">2023-03-13</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By 阿尔托莉雅</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
