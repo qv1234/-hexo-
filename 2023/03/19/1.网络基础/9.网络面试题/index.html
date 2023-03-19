@@ -1,0 +1,566 @@
+<!DOCTYPE html><html lang="cn" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"><title>网络面试题 | 碧蓝幻想</title><meta name="author" content="阿尔托莉雅"><meta name="copyright" content="阿尔托莉雅"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="0.路由器，交换机，网桥，集线器的区别？ 集线器：一层设备 网桥：二层设备，基于软件转发，接口少，接口共享设备的转发资源 交换机：二层设备，基于硬件转发（转发能力强于网桥），接口更多，接口转发资源独立 路由器：三层设备  1.简述OSI七层模型主要功能？ OSI开放式系统互联模型，由国际标准化组织ISO提供；解决数据传输的不兼容性； 控制层面： 应用层：人际交互的接口，将抽象语言转换为编码 表示层">
+<meta property="og:type" content="article">
+<meta property="og:title" content="网络面试题">
+<meta property="og:url" content="https://example.com/2023/03/19/1.%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/9.%E7%BD%91%E7%BB%9C%E9%9D%A2%E8%AF%95%E9%A2%98/index.html">
+<meta property="og:site_name" content="碧蓝幻想">
+<meta property="og:description" content="0.路由器，交换机，网桥，集线器的区别？ 集线器：一层设备 网桥：二层设备，基于软件转发，接口少，接口共享设备的转发资源 交换机：二层设备，基于硬件转发（转发能力强于网桥），接口更多，接口转发资源独立 路由器：三层设备  1.简述OSI七层模型主要功能？ OSI开放式系统互联模型，由国际标准化组织ISO提供；解决数据传输的不兼容性； 控制层面： 应用层：人际交互的接口，将抽象语言转换为编码 表示层">
+<meta property="og:locale">
+<meta property="og:image" content="https://example.com/images/Otherwallpaper/avatar.png">
+<meta property="article:published_time" content="2023-03-19T11:48:57.129Z">
+<meta property="article:modified_time" content="2023-03-19T11:52:28.160Z">
+<meta property="article:author" content="阿尔托莉雅">
+<meta property="article:tag" content="网络">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://example.com/images/Otherwallpaper/avatar.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://example.com/2023/03/19/1.%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/9.%E7%BD%91%E7%BB%9C%E9%9D%A2%E8%AF%95%E9%A2%98/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  }
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '网络面试题',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-03-19 19:52:28'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/images/Otherwallpaper/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">18</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">5</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">3</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/archive/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 工具</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/images/"><i class="fa-fw fas fa-image"></i><span> 图库</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 网易云音乐</span></a></li><li><a class="site-page child" href="/video/"><i class="fa-fw fas fa-video"></i><span> 视频</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/images/PCwallpaper/backgroud2.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="碧蓝幻想"><span class="site-name">碧蓝幻想</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/archive/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 工具</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/images/"><i class="fa-fw fas fa-image"></i><span> 图库</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 网易云音乐</span></a></li><li><a class="site-page child" href="/video/"><i class="fa-fw fas fa-video"></i><span> 视频</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">网络面试题</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2023-03-19T11:48:57.129Z" title="Created 2023-03-19 19:48:57">2023-03-19</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2023-03-19T11:52:28.160Z" title="Updated 2023-03-19 19:52:28">2023-03-19</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%BD%91%E7%BB%9C/">网络</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="网络面试题"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post View:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h4 id="0-路由器，交换机，网桥，集线器的区别？"><a href="#0-路由器，交换机，网桥，集线器的区别？" class="headerlink" title="0.路由器，交换机，网桥，集线器的区别？"></a>0.路由器，交换机，网桥，集线器的区别？</h4><ul>
+<li>集线器：一层设备</li>
+<li>网桥：二层设备，基于软件转发，接口少，接口共享设备的转发资源</li>
+<li>交换机：二层设备，基于硬件转发（转发能力强于网桥），接口更多，接口转发资源独立</li>
+<li>路由器：三层设备</li>
+</ul>
+<h4 id="1-简述OSI七层模型主要功能？"><a href="#1-简述OSI七层模型主要功能？" class="headerlink" title="1.简述OSI七层模型主要功能？"></a>1.简述OSI七层模型主要功能？</h4><ul>
+<li>OSI开放式系统互联模型，由国际标准化组织ISO提供；解决数据传输的不兼容性；</li>
+<li>控制层面：<ul>
+<li>应用层：人际交互的接口，将抽象语言转换为编码</li>
+<li>表示层：将编码转换为二进制</li>
+<li>会话层：针对每种数据建立会话虚连接（虚拟存在的，本地想象的）</li>
+</ul>
+</li>
+<li>数据层面：<ul>
+<li>传输层：选择数据的传输方式，区分不同的流量（端口号，0-65535）</li>
+<li>网络层：进行IP地址逻辑寻址和编址</li>
+<li>数据链路层：根据不同的链路类型定义不同的封装协议（链路类型：局域网，广域网）<ul>
+<li>LLC逻辑链路控制子层：保证本层传输的可靠性，描述上层所3使用的协议</li>
+<li>MAC介质访问控制子层： 提供二层地址，控制物理层</li>
+</ul>
+</li>
+<li>物理层：传输电流，规定了一些物理特性</li>
+</ul>
+</li>
+</ul>
+<h4 id="2-描述TCP和UDP协议的主要区别，为什么TCP握手需要三次？"><a href="#2-描述TCP和UDP协议的主要区别，为什么TCP握手需要三次？" class="headerlink" title="2.描述TCP和UDP协议的主要区别，为什么TCP握手需要三次？"></a>2.描述TCP和UDP协议的主要区别，为什么TCP握手需要三次？</h4><ul>
+<li>TCP传输控制协议：<ul>
+<li>面向连接（三次握手）的可靠的（确认重传机制）有序的（seq序列号）协议</li>
+<li>单播</li>
+<li>适用场景：传输量小，同步要求低，数据丢包敏感</li>
+</ul>
+</li>
+<li>UDP用户数据报协议：<ul>
+<li>无连接的不可靠的无序的协议</li>
+<li>组播和广播</li>
+<li>适用场景：传输量大，同步要求高，，数据丢包不敏感</li>
+</ul>
+</li>
+<li>TCP握手的三次原因：双方都需要建立传输通道，双方都需要进行同步请求</li>
+</ul>
+<h4 id="3-什么是DHCP，描述工作过程？"><a href="#3-什么是DHCP，描述工作过程？" class="headerlink" title="3.什么是DHCP，描述工作过程？"></a>3.什么是DHCP，描述工作过程？</h4><ul>
+<li>DHCP动态主机配置协议，动态的给主机分配IP地址等相关信息的协议</li>
+<li>模型架构为C&#x2F;S</li>
+<li>DHCP相关数据基于UDP封装，端口号为67,68</li>
+<li>DHCP的工作过程：<ul>
+<li>客户端广播DHCP Discover报文，发现DHCP服务，请求IP地址等相关信息（网关，子网掩码，服务器IP地址）</li>
+<li>服务端广播或单播DHCP Offer报文分配客户端IP地址等相关信息</li>
+<li>客户端广播DHCP Request报文标示同意本分配</li>
+<li>服务端广播或单播DHCP ACK报文进行确认</li>
+<li>客户端进行无故ARP检测地址冲突</li>
+</ul>
+</li>
+</ul>
+<h4 id="4-什么是ARP，谈谈ARP协议主要功能？"><a href="#4-什么是ARP，谈谈ARP协议主要功能？" class="headerlink" title="4.什么是ARP，谈谈ARP协议主要功能？"></a>4.什么是ARP，谈谈ARP协议主要功能？</h4><ul>
+<li>ARP地址解析协议，一个IP和MAC转换查询的协议，基于二层封装</li>
+<li>分类：<ul>
+<li>正向ARP：通过对方的IP地址获取对方的MAC地址（触发机制：第一个包封装失败触发ARP）</li>
+<li>反向ARP：通过对方的MAC地址获取对方的IP地址</li>
+<li>逆向ARP：用于帧中继</li>
+<li>无故ARP：进行地址冲突检测</li>
+<li>代理ARP：（没有配置网关IP地址和路由下一跳写出接口的情况）路由器接收到ARP报文，<strong>发现目标 IP地址和其他接口上在同一网段</strong>，将自己接口上的MAC地址封装在数据包二层进行回复。</li>
+</ul>
+</li>
+</ul>
+<h4 id="5-什么是广播域，什么是冲突域？"><a href="#5-什么是广播域，什么是冲突域？" class="headerlink" title="5.什么是广播域，什么是冲突域？"></a>5.什么是广播域，什么是冲突域？</h4><ul>
+<li>广播域：一个广播报文能够到达的范围，相同的网段，路由的每一个接口</li>
+<li>冲突域：交换机的每个接口都是一个冲突域，交换机可以隔离冲突域</li>
+</ul>
+<h4 id="6-什么是NAT，有哪些NAT"><a href="#6-什么是NAT，有哪些NAT" class="headerlink" title="6.什么是NAT，有哪些NAT?"></a>6.什么是NAT，有哪些NAT?</h4><ul>
+<li>NAT网络地址转换，将私有网络访问公有网络，节约IP地址</li>
+<li>分类：一对一，一对多，多对多，端口映射</li>
+</ul>
+<h4 id="7-简述IP数据包结构？并解释相对应内容？"><a href="#7-简述IP数据包结构？并解释相对应内容？" class="headerlink" title="7.简述IP数据包结构？并解释相对应内容？"></a>7.简述IP数据包结构？并解释相对应内容？</h4><table>
+<thead>
+<tr>
+<th>行数</th>
+<th>字段</th>
+<th>位数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>Version版本</td>
+<td>4</td>
+<td>标识版本号</td>
+</tr>
+<tr>
+<td>1</td>
+<td>IP Header Length报文头部长度</td>
+<td>4</td>
+<td>-</td>
+</tr>
+<tr>
+<td>1</td>
+<td>DS Field服务质量</td>
+<td>8</td>
+<td>1.IP优先级方式：3+5，3bit对流量进行标记，111保留，110协议流量，101VOIP；2.DSCP区分服务代码点方式：6+2，6bit进行流量的标记，2bitECN显示拥塞通告；PHP逐条行为：21种行为，EF特快转发，AF确保转发，default，CS分类选择</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Total Length报文总长度</td>
+<td>16</td>
+<td>总长度 &#x3D; IP头头部+TCP&#x2F;UDP头部+数据</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Identification标识符</td>
+<td>16</td>
+<td>用于分片，所有的分片相同</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Flags标记位</td>
+<td>3</td>
+<td>用于分片，R：保留，DF&#x3D;1：分片，MF&#x3D;1：后面还有分片</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Fragment Offset片偏移</td>
+<td>13</td>
+<td>用于分片，分片偏移值</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Time to Live生存时间</td>
+<td>8</td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>Protocol协议</td>
+<td>8</td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>Header Checksum校验盒</td>
+<td>16</td>
+<td>对数据包头部进行校验</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Source IP Address</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>Destination IP Address</td>
+<td>32</td>
+<td></td>
+</tr>
+</tbody></table>
+<ul>
+<li>IP的头部长度：最小20字节，最大60字节</li>
+</ul>
+<p><img src="C:\Users\user\AppData\Roaming\Typora\typora-user-images\image-20221205144138010.png" alt="image-20221205144138010"></p>
+<h4 id="8-RIP协议的防环机制有哪些？"><a href="#8-RIP协议的防环机制有哪些？" class="headerlink" title="8.RIP协议的防环机制有哪些？"></a>8.RIP协议的防环机制有哪些？</h4><ul>
+<li><p>最大跳数</p>
+</li>
+<li><p>水平分割：通过此接口学习到的路由不能再从此接口转发出去</p>
+</li>
+<li><p>毒性逆转水平分割：</p>
+<ul>
+<li>当一个路由不可达时，我方发送一个跳数为16跳（毒性）的路由给对方；对方会1.删除对应的路由条目，2.将这条路由原封不动的发送回去确认（逆转水平分割），3.同时将毒化路由扩散出去 ，让其他的路由也删除此路由</li>
+<li>使用的原因：当一个路由不可达时，我方不发送任何信息对方，对方会认为这条路由依然存在，直到抑制计时器180S结束</li>
+</ul>
+</li>
+<li><p>抑制计时器</p>
+</li>
+<li><p>触发更新</p>
+</li>
+</ul>
+<h4 id="9-RIP协议的计时器有哪些？"><a href="#9-RIP协议的计时器有哪些？" class="headerlink" title="9.RIP协议的计时器有哪些？"></a>9.RIP协议的计时器有哪些？</h4><ul>
+<li>更新计时器：每30S发送一次路由</li>
+<li>无效计时器：如果对方不发此路由，等待180S后将路由无效（放在路由不转发表里面）</li>
+<li>垃圾回收计时器：路由无效后等待120S后将路由删除</li>
+</ul>
+<h4 id="10-OSPF协议领居关系建立的条件？"><a href="#10-OSPF协议领居关系建立的条件？" class="headerlink" title="10.OSPF协议领居关系建立的条件？"></a>10.OSPF协议领居关系建立的条件？</h4><ul>
+<li>Router-ID必须不同</li>
+<li>Area-ID必须相同</li>
+<li>认证类型（不认证：0，明文认证：1，MD5：2）</li>
+<li>hello时间</li>
+<li>dead时间</li>
+<li>特殊区域相同（E：代表着是否支持5类LSA，N：是否支持7类LSA）<ul>
+<li>正常区域：E&#x3D;1，N&#x3D;0</li>
+<li>stub区域：E&#x3D;0，N&#x3D;0</li>
+<li>NSSA区域：E&#x3D;0，N&#x3D;1</li>
+</ul>
+</li>
+</ul>
+<h4 id="11-什么是ABR？什么是ASBR？"><a href="#11-什么是ABR？什么是ASBR？" class="headerlink" title="11.什么是ABR？什么是ASBR？"></a>11.什么是ABR？什么是ASBR？</h4><ul>
+<li>ABR边界路由器：能产生3类LSA的路由器；处于Area0和其他Area之间的路由器</li>
+<li>ASBR自治系统边界路由器：能产生5类和7类LSA的路由器；处于OSPF区域和非OSPF区域之间将非OSPF协议的路由引入到OSPF的网络中的路由，将7类LSA转变成5类LSA的路由器</li>
+</ul>
+<h4 id="12-OSPF协议消息数据包有哪些？"><a href="#12-OSPF协议消息数据包有哪些？" class="headerlink" title="12.OSPF协议消息数据包有哪些？"></a>12.OSPF协议消息数据包有哪些？</h4><ul>
+<li>hello：维持邻居关系，保活，DR&#x2F;BDR选举，携带RID</li>
+<li>DBD：主从关系选举，携带LSA目录信息</li>
+<li>LSA</li>
+<li>LSU</li>
+<li>LSACK</li>
+</ul>
+<h4 id="13-OSPF协议消息数据包有哪些包需要确认："><a href="#13-OSPF协议消息数据包有哪些包需要确认：" class="headerlink" title="13.OSPF协议消息数据包有哪些包需要确认："></a>13.OSPF协议消息数据包有哪些包需要确认：</h4><ul>
+<li>DBD，LSA，LSU，LSACK都需要确认，前三种是显性确认，后一种是隐形确认</li>
+<li>OSPF中 使用确认回包保证它的可靠性</li>
+</ul>
+<h4 id="14-显式确认和隐式确认的区别？"><a href="#14-显式确认和隐式确认的区别？" class="headerlink" title="14.显式确认和隐式确认的区别？"></a>14.显式确认和隐式确认的区别？</h4><ul>
+<li>显式确认：发了数据必须给确认回包</li>
+<li>隐式确认：seq序列号</li>
+<li>DBD，LSR，LSU使用的是显示确认；LSACK使用的是隐式确认</li>
+</ul>
+<h4 id="15-简述OSPF-邻居状态机制："><a href="#15-简述OSPF-邻居状态机制：" class="headerlink" title="15.简述OSPF 邻居状态机制："></a>15.简述OSPF 邻居状态机制：</h4><ol>
+<li>Down：</li>
+<li>Init初始化：一旦发送了hello包，进入Init状态；然后等待一个dead时间，如果无法进入下一个状态，退回Down状态</li>
+<li>Two-way双向通讯：收到的hello包中包含了自己路由器的RID进入Two-way状态，然后进行DR&#x2F;BDR的选举（参选优先级，RID）</li>
+<li>Exstart预启动：一旦发送DBD报文，进入Exstart状态；然后进行主从关系的选举（router-id大的一方为主）</li>
+<li>Exchange准交换：主从选举完成，发送DBD数据库描述包（包含LSA的目录信息），进入Exchange状态</li>
+<li>Loading加载：一旦发送LSU链路状态更新报文，进入Loading加载</li>
+<li>Full：请求列表和重传列表清空，双方都学到了对方的LSA信息，进入Full状态</li>
+</ol>
+<h4 id="16-OSPF-邻居关系建立卡在不同的状态可能是什么样的原因导致的？例如init"><a href="#16-OSPF-邻居关系建立卡在不同的状态可能是什么样的原因导致的？例如init" class="headerlink" title="16.OSPF 邻居关系建立卡在不同的状态可能是什么样的原因导致的？例如init"></a>16.OSPF 邻居关系建立卡在不同的状态可能是什么样的原因导致的？例如init</h4><ul>
+<li>Init状态：路由器收到的hello包中没有自己路由器的RID时，一个dead时间后退回Down；例：验证只有某一边开启，ACL在某一边阻止了Hello包</li>
+<li>Two-way状态：网络中无法选举DR&#x2F;BDR，路由器上都配置了优先级为0</li>
+<li>Exstart状态：开启了MTU协商，但最大传输单元MTU不一致</li>
+<li>Exchange状态：开启了MTU协商，但最大传输单元MTU不一致</li>
+<li>Loading状态：需要学习的LSA超过自己存储LSA的容量</li>
+</ul>
+<h4 id="16-OSPF区域划分的好处是？"><a href="#16-OSPF区域划分的好处是？" class="headerlink" title="16.OSPF区域划分的好处是？"></a>16.OSPF区域划分的好处是？</h4><ul>
+<li>减少LSA的数量，限制传播范围；即优化OSPF协议</li>
+</ul>
+<h4 id="17-OSPF-外部路由-1类型和2类型的区别是？一类型和二类型的路由在选路中出现如何比较？"><a href="#17-OSPF-外部路由-1类型和2类型的区别是？一类型和二类型的路由在选路中出现如何比较？" class="headerlink" title="17.OSPF 外部路由 1类型和2类型的区别是？一类型和二类型的路由在选路中出现如何比较？"></a>17.OSPF 外部路由 1类型和2类型的区别是？一类型和二类型的路由在选路中出现如何比较？</h4><ul>
+<li>类型1：在路由传递过程中显示度量值</li>
+<li>类型2：在路由传递过程中不显示度量值</li>
+<li>选路中：类型一优于类型二；类型一之间比较的种子度量值和传递过程中度量值的总和；类型二之间先比较的种子度量值，再比较传递过程中度量值的</li>
+</ul>
+<h4 id="18-OSPF-nssa-区域有哪些LSA"><a href="#18-OSPF-nssa-区域有哪些LSA" class="headerlink" title="18.OSPF nssa 区域有哪些LSA?"></a>18.OSPF nssa 区域有哪些LSA?</h4><ul>
+<li>NSSA区域：not so stub area区域</li>
+<li>一类LSA，二类LSA，三类LSA，七类LSA</li>
+</ul>
+<h4 id="19-两台路由器通过直连链路，建立-OSPF-邻居，那么在一边使用-P2P，而一边使用-P2MP-的情况下，能正常建立到邻接状态么-如果一边使用P2P，一边使用BMA，能否建立邻接关系？"><a href="#19-两台路由器通过直连链路，建立-OSPF-邻居，那么在一边使用-P2P，而一边使用-P2MP-的情况下，能正常建立到邻接状态么-如果一边使用P2P，一边使用BMA，能否建立邻接关系？" class="headerlink" title="19.两台路由器通过直连链路，建立 OSPF 邻居，那么在一边使用 P2P，而一边使用 P2MP 的情况下，能正常建立到邻接状态么?如果一边使用P2P，一边使用BMA，能否建立邻接关系？"></a>19.两台路由器通过直连链路，建立 OSPF 邻居，那么在一边使用 P2P，而一边使用 P2MP 的情况下，能正常建立到邻接状态么?如果一边使用P2P，一边使用BMA，能否建立邻接关系？</h4><ul>
+<li>P2P和P2MP：P2P网络类型（hello10S，dead time 40S），P2MP网络类型（hello 30S，dead time 120S），无法建立邻居关系，所以无法建立邻接关系；如果想建立邻接关系，可以修改hello时间和dead时间</li>
+<li>P2P和BMA：P2P网络类型（不需要进行DR&#x2F;BDR选举，hello10S，dead time 40S），BMA网络类型（需要进行DR&#x2F;BDR选举，hello10S，dead time 40），可以建立邻居关系，所以可以建立邻接关系；但是无法学习到对应的路由，因为双方的算法是无法运作的</li>
+</ul>
+<h4 id="21-OSPF-NBMA网络类型需要配置些什么？NBMA网络类型中hub（中心）-spoke（分支）网络结构下需要配置什么"><a href="#21-OSPF-NBMA网络类型需要配置些什么？NBMA网络类型中hub（中心）-spoke（分支）网络结构下需要配置什么" class="headerlink" title="21.OSPF NBMA网络类型需要配置些什么？NBMA网络类型中hub（中心）-spoke（分支）网络结构下需要配置什么?"></a>21.OSPF NBMA网络类型需要配置些什么？NBMA网络类型中hub（中心）-spoke（分支）网络结构下需要配置什么?</h4><ul>
+<li>NBMA网络配置：NBMA中没有广播和组播，不能建立邻居关系，需要手工指定peer</li>
+<li>hub-spoke网络结构配置：指定DR位置为hub端</li>
+</ul>
+<h4 id="22-OSPF-stub末梢区域的作用？"><a href="#22-OSPF-stub末梢区域的作用？" class="headerlink" title="22.OSPF stub末梢区域的作用？"></a>22.OSPF stub末梢区域的作用？</h4><ul>
+<li>在末梢区域内可以限制4类LSA和5类LSA的进入</li>
+<li>没有ASBR，产生3类的缺省</li>
+<li>不能做虚链路</li>
+</ul>
+<h4 id="23-OSPF-协议是纯链路状态型协议吗？"><a href="#23-OSPF-协议是纯链路状态型协议吗？" class="headerlink" title="23.OSPF 协议是纯链路状态型协议吗？"></a>23.OSPF 协议是纯链路状态型协议吗？</h4><ul>
+<li>不是，区域内是纯链路状态型，区域之间是距离矢量</li>
+</ul>
+<h4 id="24-简述OSPF-几种LSA的主要功能？"><a href="#24-简述OSPF-几种LSA的主要功能？" class="headerlink" title="24.简述OSPF 几种LSA的主要功能？"></a>24.简述OSPF 几种LSA的主要功能？</h4><ol>
+<li>一类LSA：本路由器针对某个区域产生的路由信息和拓扑信息，传播范围：本区域内</li>
+<li>二类LSA：对一类LSA传递的信息进行补充（路由器数量和网络掩码），只有在DR&#x2F;BDR的选举中，传播范围：本区域内</li>
+<li>三类LSA：区域之间传递路由，传播范围：区域之间</li>
+<li>四类LSA：通告ASBR的位置，传播范围：除了ASBR所在区域</li>
+<li>五类LSA：传递外部路由，传播范围：整个OSPF区域</li>
+<li>七类LSA：在NSSA区域中，传递外部路由</li>
+</ol>
+<h4 id="25-OSPF协议中如何限制LSA的数量？"><a href="#25-OSPF协议中如何限制LSA的数量？" class="headerlink" title="25.OSPF协议中如何限制LSA的数量？"></a>25.OSPF协议中如何限制LSA的数量？</h4><ul>
+<li>汇总</li>
+<li>配置特殊区域</li>
+<li>合理划分网段</li>
+</ul>
+<h4 id="26-OSPF区域设计原则？"><a href="#26-OSPF区域设计原则？" class="headerlink" title="26.OSPF区域设计原则？"></a>26.OSPF区域设计原则？</h4><ul>
+<li>OSPF网络必须存在并且唯一的骨干区域（单区域除外）</li>
+<li>若存在非骨干区域的话，非骨干区域必须与骨干区域直接相连</li>
+</ul>
+<h4 id="27-IBGP-为什么采用全互联？不采用怎么部署？"><a href="#27-IBGP-为什么采用全互联？不采用怎么部署？" class="headerlink" title="27.IBGP 为什么采用全互联？不采用怎么部署？"></a>27.IBGP 为什么采用全互联？不采用怎么部署？</h4><ul>
+<li>原因：IBGP邻居之间只传一跳原则</li>
+<li>部署：<ul>
+<li>IBGP联邦</li>
+<li>IBGP反射器</li>
+</ul>
+</li>
+</ul>
+<h4 id="28-如果BGP-加上max-path-，会在那个BGP-选路属性之前应用这个选项？"><a href="#28-如果BGP-加上max-path-，会在那个BGP-选路属性之前应用这个选项？" class="headerlink" title="28.如果BGP 加上max-path ，会在那个BGP 选路属性之前应用这个选项？"></a>28.如果BGP 加上max-path ，会在那个BGP 选路属性之前应用这个选项？</h4><ul>
+<li>优选最小Router-id 属性前面</li>
+</ul>
+<h4 id="29-谈谈BGP-路由反射的特点？"><a href="#29-谈谈BGP-路由反射的特点？" class="headerlink" title="29.谈谈BGP 路由反射的特点？"></a>29.谈谈BGP 路由反射的特点？</h4><ul>
+<li>非非不传（非客户端收到的路由不能传递给其他的非客户端）</li>
+<li>打破水平分割</li>
+</ul>
+<h4 id="30-什么是IBGP-同步？-为什么现在的BGP默认都是关闭的？"><a href="#30-什么是IBGP-同步？-为什么现在的BGP默认都是关闭的？" class="headerlink" title="30.什么是IBGP 同步？ 为什么现在的BGP默认都是关闭的？"></a>30.什么是IBGP 同步？ 为什么现在的BGP默认都是关闭的？</h4><ul>
+<li>指 IBGP 和IGP路由 之间的同步，其目的是为了避免出现误导外部AS 路由器的现象发生</li>
+<li>原因：<ul>
+<li>在BGP同步打开的情况下，一个BGP路由器不会把这些通过IBGP邻居学习到的BGP路由通告给自己的EBGP邻居</li>
+<li>除非自己的IGP路由表中存在这些路由，才可以向EBGP路由通告</li>
+</ul>
+</li>
+</ul>
+<h4 id="31-BGP协议和IGP协议的区别？"><a href="#31-BGP协议和IGP协议的区别？" class="headerlink" title="31.BGP协议和IGP协议的区别？"></a>31.BGP协议和IGP协议的区别？</h4><ul>
+<li>BGP外部网关协议：</li>
+<li>IGP内部网关协议：路由的收敛速度快，</li>
+</ul>
+<h4 id="32-BGP选路规则？"><a href="#32-BGP选路规则？" class="headerlink" title="32.BGP选路规则？"></a>32.BGP选路规则？</h4><ul>
+<li>权重值</li>
+<li>本地优先级</li>
+<li>下一跳为本地</li>
+<li>AS-path</li>
+<li>起源属性</li>
+<li>度量值</li>
+<li>优先学习EBGP的路由</li>
+<li>优选AS中IGP路由度量最小的</li>
+<li>优选簇ID表最短的</li>
+<li>优选起源者ID最小的</li>
+<li>优先RID最小路由器发布的路由</li>
+<li>优选IP地址最小邻居的路由</li>
+</ul>
+<h4 id="33-EBGP-邻居的防环机制？IBGP邻居的防环机制？"><a href="#33-EBGP-邻居的防环机制？IBGP邻居的防环机制？" class="headerlink" title="33.EBGP 邻居的防环机制？IBGP邻居的防环机制？"></a>33.EBGP 邻居的防环机制？IBGP邻居的防环机制？</h4><ul>
+<li>EBGP：利用AS-Path属性，接收到路由条目中，若出现本地的AS编号记录将拒绝接收该条目</li>
+<li>IBGP：IBGP只传一跳原则，起源者属性，簇ID，next-hop</li>
+</ul>
+<h4 id="34-BGP-路由反射如何防环？"><a href="#34-BGP-路由反射如何防环？" class="headerlink" title="34.BGP 路由反射如何防环？"></a>34.BGP 路由反射如何防环？</h4><ul>
+<li>起源者属性，簇ID</li>
+</ul>
+<h4 id="35-PPP-协议过程是？"><a href="#35-PPP-协议过程是？" class="headerlink" title="35.PPP 协议过程是？"></a>35.PPP 协议过程是？</h4><ul>
+<li>ppp点对点协议，<strong>华为设备默认</strong>串口封装技术，HDLC的升级版（HDLC不支持认证）</li>
+<li>工作过程：<ol>
+<li>LCP链路控制协议协商：检测链路封装均为PPP，同时测试链路的连通性</li>
+<li>PPP认证：增加PPP会话的安全性，分类：PAP，CHAP</li>
+<li>NCP网络控制协议协商：协商上层（网络层）使用的协议；在协商期间，发送自己的IP地址，将对方的IP地址以主机路由的方式加入在路由表中</li>
+</ol>
+</li>
+</ul>
+<h4 id="36-Chap-认证过程？"><a href="#36-Chap-认证过程？" class="headerlink" title="36.Chap 认证过程？"></a>36.Chap 认证过程？</h4><ul>
+<li>chap挑战握手认证协议，使用MD5的认证方式进行三次握手的认证协议</li>
+<li>认证过程：（主认证方需要被认证方提供用户名和密码）<ol>
+<li>第一次握手：主认证方发送随机值给被被认证方</li>
+<li>第二次握手：被认证方基于随机值进行MD5运算得出MD5值，然后以明文发送自己得用户名和MD5值给主认证方（挑战）</li>
+<li>第三次握手：主认证方根据被认证发送的用户名，查看对应的密码，将密码和随机值进行MD5运算；然后比较自己计算的MD5值和被认证方发送的MD5值；如果相等，回复被认证方success</li>
+</ol>
+</li>
+</ul>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="https://example.com">阿尔托莉雅</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="https://example.com/2023/03/19/1.%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/9.%E7%BD%91%E7%BB%9C%E9%9D%A2%E8%AF%95%E9%A2%98/">https://example.com/2023/03/19/1.%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/9.%E7%BD%91%E7%BB%9C%E9%9D%A2%E8%AF%95%E9%A2%98/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E7%BD%91%E7%BB%9C/">网络</a></div><div class="post_share"><div class="social-share" data-image="/images/Otherwallpaper/avatar.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2023/03/19/1.%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/6.%E4%BA%A4%E6%8D%A2%E6%8A%80%E6%9C%AF%E5%92%8C%E4%B8%89%E5%B1%82%E6%9E%B6%E6%9E%84/" title="交换技术和三层架构"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">交换技术和三层架构</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>Related Articles</span></div><div class="relatedPosts-list"><div><a href="/2023/03/19/1.%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/1.HICA-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%A6%82%E5%BF%B5/" title="HICA-计算机网络概念"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-03-19</div><div class="title">HICA-计算机网络概念</div></div></a></div><div><a href="/2023/03/19/1.%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/2.HCIA-OSI%E6%A8%A1%E5%9E%8B%E5%92%8CTCPIP%E6%A8%A1%E5%9E%8B/" title="HICA-OSI模型和TCP&#x2F;IP模型"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-03-19</div><div class="title">HICA-OSI模型和TCP&#x2F;IP模型</div></div></a></div><div><a href="/2023/03/19/1.%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/3.HCIA-%E5%8D%8E%E4%B8%BA%E6%A8%A1%E6%8B%9F%E5%99%A8%E5%92%8C%EF%BC%8C%E8%B7%AF%E7%94%B1%EF%BC%8C%E6%8E%A7%E5%88%B6%E5%88%97%E8%A1%A8%EF%BC%8CACL/" title="HCIA-华为模拟器和，路由，控制列表，ACL"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-03-19</div><div class="title">HCIA-华为模拟器和，路由，控制列表，ACL</div></div></a></div><div><a href="/2023/03/19/1.%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/4.HCIP-%E7%BD%91%E7%BB%9C%E7%B1%BB%E5%9E%8BGREOSPF/" title="HCIP-网络类型GREOSPF"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-03-19</div><div class="title">HCIP-网络类型GREOSPF</div></div></a></div><div><a href="/2023/03/19/1.%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/5.HICP-BGPIPv6/" title="HICP-BGPIPv6"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-03-19</div><div class="title">HICP-BGPIPv6</div></div></a></div><div><a href="/2023/03/19/1.%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/6.%E4%BA%A4%E6%8D%A2%E6%8A%80%E6%9C%AF%E5%92%8C%E4%B8%89%E5%B1%82%E6%9E%B6%E6%9E%84/" title="交换技术和三层架构"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-03-19</div><div class="title">交换技术和三层架构</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> Comment</span></div><div id="comment-switch"><span class="first-comment">Valine</span><span class="switch-btn"></span><span class="second-comment">Disqus</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div><div><div id="disqus_thread"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/images/Otherwallpaper/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">阿尔托莉雅</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">18</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">5</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://toscode.gitee.com/blue-fantasy" target="_blank" title="Gitee"><i class="fab fa-github"></i></a><a class="social-icon" href="/1095322098@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Catalog</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#0-%E8%B7%AF%E7%94%B1%E5%99%A8%EF%BC%8C%E4%BA%A4%E6%8D%A2%E6%9C%BA%EF%BC%8C%E7%BD%91%E6%A1%A5%EF%BC%8C%E9%9B%86%E7%BA%BF%E5%99%A8%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9F"><span class="toc-number">1.</span> <span class="toc-text">0.路由器，交换机，网桥，集线器的区别？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E7%AE%80%E8%BF%B0OSI%E4%B8%83%E5%B1%82%E6%A8%A1%E5%9E%8B%E4%B8%BB%E8%A6%81%E5%8A%9F%E8%83%BD%EF%BC%9F"><span class="toc-number">2.</span> <span class="toc-text">1.简述OSI七层模型主要功能？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E6%8F%8F%E8%BF%B0TCP%E5%92%8CUDP%E5%8D%8F%E8%AE%AE%E7%9A%84%E4%B8%BB%E8%A6%81%E5%8C%BA%E5%88%AB%EF%BC%8C%E4%B8%BA%E4%BB%80%E4%B9%88TCP%E6%8F%A1%E6%89%8B%E9%9C%80%E8%A6%81%E4%B8%89%E6%AC%A1%EF%BC%9F"><span class="toc-number">3.</span> <span class="toc-text">2.描述TCP和UDP协议的主要区别，为什么TCP握手需要三次？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E4%BB%80%E4%B9%88%E6%98%AFDHCP%EF%BC%8C%E6%8F%8F%E8%BF%B0%E5%B7%A5%E4%BD%9C%E8%BF%87%E7%A8%8B%EF%BC%9F"><span class="toc-number">4.</span> <span class="toc-text">3.什么是DHCP，描述工作过程？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-%E4%BB%80%E4%B9%88%E6%98%AFARP%EF%BC%8C%E8%B0%88%E8%B0%88ARP%E5%8D%8F%E8%AE%AE%E4%B8%BB%E8%A6%81%E5%8A%9F%E8%83%BD%EF%BC%9F"><span class="toc-number">5.</span> <span class="toc-text">4.什么是ARP，谈谈ARP协议主要功能？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-%E4%BB%80%E4%B9%88%E6%98%AF%E5%B9%BF%E6%92%AD%E5%9F%9F%EF%BC%8C%E4%BB%80%E4%B9%88%E6%98%AF%E5%86%B2%E7%AA%81%E5%9F%9F%EF%BC%9F"><span class="toc-number">6.</span> <span class="toc-text">5.什么是广播域，什么是冲突域？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-%E4%BB%80%E4%B9%88%E6%98%AFNAT%EF%BC%8C%E6%9C%89%E5%93%AA%E4%BA%9BNAT"><span class="toc-number">7.</span> <span class="toc-text">6.什么是NAT，有哪些NAT?</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-%E7%AE%80%E8%BF%B0IP%E6%95%B0%E6%8D%AE%E5%8C%85%E7%BB%93%E6%9E%84%EF%BC%9F%E5%B9%B6%E8%A7%A3%E9%87%8A%E7%9B%B8%E5%AF%B9%E5%BA%94%E5%86%85%E5%AE%B9%EF%BC%9F"><span class="toc-number">8.</span> <span class="toc-text">7.简述IP数据包结构？并解释相对应内容？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#8-RIP%E5%8D%8F%E8%AE%AE%E7%9A%84%E9%98%B2%E7%8E%AF%E6%9C%BA%E5%88%B6%E6%9C%89%E5%93%AA%E4%BA%9B%EF%BC%9F"><span class="toc-number">9.</span> <span class="toc-text">8.RIP协议的防环机制有哪些？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#9-RIP%E5%8D%8F%E8%AE%AE%E7%9A%84%E8%AE%A1%E6%97%B6%E5%99%A8%E6%9C%89%E5%93%AA%E4%BA%9B%EF%BC%9F"><span class="toc-number">10.</span> <span class="toc-text">9.RIP协议的计时器有哪些？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#10-OSPF%E5%8D%8F%E8%AE%AE%E9%A2%86%E5%B1%85%E5%85%B3%E7%B3%BB%E5%BB%BA%E7%AB%8B%E7%9A%84%E6%9D%A1%E4%BB%B6%EF%BC%9F"><span class="toc-number">11.</span> <span class="toc-text">10.OSPF协议领居关系建立的条件？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#11-%E4%BB%80%E4%B9%88%E6%98%AFABR%EF%BC%9F%E4%BB%80%E4%B9%88%E6%98%AFASBR%EF%BC%9F"><span class="toc-number">12.</span> <span class="toc-text">11.什么是ABR？什么是ASBR？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#12-OSPF%E5%8D%8F%E8%AE%AE%E6%B6%88%E6%81%AF%E6%95%B0%E6%8D%AE%E5%8C%85%E6%9C%89%E5%93%AA%E4%BA%9B%EF%BC%9F"><span class="toc-number">13.</span> <span class="toc-text">12.OSPF协议消息数据包有哪些？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#13-OSPF%E5%8D%8F%E8%AE%AE%E6%B6%88%E6%81%AF%E6%95%B0%E6%8D%AE%E5%8C%85%E6%9C%89%E5%93%AA%E4%BA%9B%E5%8C%85%E9%9C%80%E8%A6%81%E7%A1%AE%E8%AE%A4%EF%BC%9A"><span class="toc-number">14.</span> <span class="toc-text">13.OSPF协议消息数据包有哪些包需要确认：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#14-%E6%98%BE%E5%BC%8F%E7%A1%AE%E8%AE%A4%E5%92%8C%E9%9A%90%E5%BC%8F%E7%A1%AE%E8%AE%A4%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9F"><span class="toc-number">15.</span> <span class="toc-text">14.显式确认和隐式确认的区别？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#15-%E7%AE%80%E8%BF%B0OSPF-%E9%82%BB%E5%B1%85%E7%8A%B6%E6%80%81%E6%9C%BA%E5%88%B6%EF%BC%9A"><span class="toc-number">16.</span> <span class="toc-text">15.简述OSPF 邻居状态机制：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#16-OSPF-%E9%82%BB%E5%B1%85%E5%85%B3%E7%B3%BB%E5%BB%BA%E7%AB%8B%E5%8D%A1%E5%9C%A8%E4%B8%8D%E5%90%8C%E7%9A%84%E7%8A%B6%E6%80%81%E5%8F%AF%E8%83%BD%E6%98%AF%E4%BB%80%E4%B9%88%E6%A0%B7%E7%9A%84%E5%8E%9F%E5%9B%A0%E5%AF%BC%E8%87%B4%E7%9A%84%EF%BC%9F%E4%BE%8B%E5%A6%82init"><span class="toc-number">17.</span> <span class="toc-text">16.OSPF 邻居关系建立卡在不同的状态可能是什么样的原因导致的？例如init</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#16-OSPF%E5%8C%BA%E5%9F%9F%E5%88%92%E5%88%86%E7%9A%84%E5%A5%BD%E5%A4%84%E6%98%AF%EF%BC%9F"><span class="toc-number">18.</span> <span class="toc-text">16.OSPF区域划分的好处是？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#17-OSPF-%E5%A4%96%E9%83%A8%E8%B7%AF%E7%94%B1-1%E7%B1%BB%E5%9E%8B%E5%92%8C2%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%8C%BA%E5%88%AB%E6%98%AF%EF%BC%9F%E4%B8%80%E7%B1%BB%E5%9E%8B%E5%92%8C%E4%BA%8C%E7%B1%BB%E5%9E%8B%E7%9A%84%E8%B7%AF%E7%94%B1%E5%9C%A8%E9%80%89%E8%B7%AF%E4%B8%AD%E5%87%BA%E7%8E%B0%E5%A6%82%E4%BD%95%E6%AF%94%E8%BE%83%EF%BC%9F"><span class="toc-number">19.</span> <span class="toc-text">17.OSPF 外部路由 1类型和2类型的区别是？一类型和二类型的路由在选路中出现如何比较？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#18-OSPF-nssa-%E5%8C%BA%E5%9F%9F%E6%9C%89%E5%93%AA%E4%BA%9BLSA"><span class="toc-number">20.</span> <span class="toc-text">18.OSPF nssa 区域有哪些LSA?</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#19-%E4%B8%A4%E5%8F%B0%E8%B7%AF%E7%94%B1%E5%99%A8%E9%80%9A%E8%BF%87%E7%9B%B4%E8%BF%9E%E9%93%BE%E8%B7%AF%EF%BC%8C%E5%BB%BA%E7%AB%8B-OSPF-%E9%82%BB%E5%B1%85%EF%BC%8C%E9%82%A3%E4%B9%88%E5%9C%A8%E4%B8%80%E8%BE%B9%E4%BD%BF%E7%94%A8-P2P%EF%BC%8C%E8%80%8C%E4%B8%80%E8%BE%B9%E4%BD%BF%E7%94%A8-P2MP-%E7%9A%84%E6%83%85%E5%86%B5%E4%B8%8B%EF%BC%8C%E8%83%BD%E6%AD%A3%E5%B8%B8%E5%BB%BA%E7%AB%8B%E5%88%B0%E9%82%BB%E6%8E%A5%E7%8A%B6%E6%80%81%E4%B9%88-%E5%A6%82%E6%9E%9C%E4%B8%80%E8%BE%B9%E4%BD%BF%E7%94%A8P2P%EF%BC%8C%E4%B8%80%E8%BE%B9%E4%BD%BF%E7%94%A8BMA%EF%BC%8C%E8%83%BD%E5%90%A6%E5%BB%BA%E7%AB%8B%E9%82%BB%E6%8E%A5%E5%85%B3%E7%B3%BB%EF%BC%9F"><span class="toc-number">21.</span> <span class="toc-text">19.两台路由器通过直连链路，建立 OSPF 邻居，那么在一边使用 P2P，而一边使用 P2MP 的情况下，能正常建立到邻接状态么?如果一边使用P2P，一边使用BMA，能否建立邻接关系？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#21-OSPF-NBMA%E7%BD%91%E7%BB%9C%E7%B1%BB%E5%9E%8B%E9%9C%80%E8%A6%81%E9%85%8D%E7%BD%AE%E4%BA%9B%E4%BB%80%E4%B9%88%EF%BC%9FNBMA%E7%BD%91%E7%BB%9C%E7%B1%BB%E5%9E%8B%E4%B8%ADhub%EF%BC%88%E4%B8%AD%E5%BF%83%EF%BC%89-spoke%EF%BC%88%E5%88%86%E6%94%AF%EF%BC%89%E7%BD%91%E7%BB%9C%E7%BB%93%E6%9E%84%E4%B8%8B%E9%9C%80%E8%A6%81%E9%85%8D%E7%BD%AE%E4%BB%80%E4%B9%88"><span class="toc-number">22.</span> <span class="toc-text">21.OSPF NBMA网络类型需要配置些什么？NBMA网络类型中hub（中心）-spoke（分支）网络结构下需要配置什么?</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#22-OSPF-stub%E6%9C%AB%E6%A2%A2%E5%8C%BA%E5%9F%9F%E7%9A%84%E4%BD%9C%E7%94%A8%EF%BC%9F"><span class="toc-number">23.</span> <span class="toc-text">22.OSPF stub末梢区域的作用？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#23-OSPF-%E5%8D%8F%E8%AE%AE%E6%98%AF%E7%BA%AF%E9%93%BE%E8%B7%AF%E7%8A%B6%E6%80%81%E5%9E%8B%E5%8D%8F%E8%AE%AE%E5%90%97%EF%BC%9F"><span class="toc-number">24.</span> <span class="toc-text">23.OSPF 协议是纯链路状态型协议吗？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#24-%E7%AE%80%E8%BF%B0OSPF-%E5%87%A0%E7%A7%8DLSA%E7%9A%84%E4%B8%BB%E8%A6%81%E5%8A%9F%E8%83%BD%EF%BC%9F"><span class="toc-number">25.</span> <span class="toc-text">24.简述OSPF 几种LSA的主要功能？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#25-OSPF%E5%8D%8F%E8%AE%AE%E4%B8%AD%E5%A6%82%E4%BD%95%E9%99%90%E5%88%B6LSA%E7%9A%84%E6%95%B0%E9%87%8F%EF%BC%9F"><span class="toc-number">26.</span> <span class="toc-text">25.OSPF协议中如何限制LSA的数量？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#26-OSPF%E5%8C%BA%E5%9F%9F%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99%EF%BC%9F"><span class="toc-number">27.</span> <span class="toc-text">26.OSPF区域设计原则？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#27-IBGP-%E4%B8%BA%E4%BB%80%E4%B9%88%E9%87%87%E7%94%A8%E5%85%A8%E4%BA%92%E8%81%94%EF%BC%9F%E4%B8%8D%E9%87%87%E7%94%A8%E6%80%8E%E4%B9%88%E9%83%A8%E7%BD%B2%EF%BC%9F"><span class="toc-number">28.</span> <span class="toc-text">27.IBGP 为什么采用全互联？不采用怎么部署？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#28-%E5%A6%82%E6%9E%9CBGP-%E5%8A%A0%E4%B8%8Amax-path-%EF%BC%8C%E4%BC%9A%E5%9C%A8%E9%82%A3%E4%B8%AABGP-%E9%80%89%E8%B7%AF%E5%B1%9E%E6%80%A7%E4%B9%8B%E5%89%8D%E5%BA%94%E7%94%A8%E8%BF%99%E4%B8%AA%E9%80%89%E9%A1%B9%EF%BC%9F"><span class="toc-number">29.</span> <span class="toc-text">28.如果BGP 加上max-path ，会在那个BGP 选路属性之前应用这个选项？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#29-%E8%B0%88%E8%B0%88BGP-%E8%B7%AF%E7%94%B1%E5%8F%8D%E5%B0%84%E7%9A%84%E7%89%B9%E7%82%B9%EF%BC%9F"><span class="toc-number">30.</span> <span class="toc-text">29.谈谈BGP 路由反射的特点？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#30-%E4%BB%80%E4%B9%88%E6%98%AFIBGP-%E5%90%8C%E6%AD%A5%EF%BC%9F-%E4%B8%BA%E4%BB%80%E4%B9%88%E7%8E%B0%E5%9C%A8%E7%9A%84BGP%E9%BB%98%E8%AE%A4%E9%83%BD%E6%98%AF%E5%85%B3%E9%97%AD%E7%9A%84%EF%BC%9F"><span class="toc-number">31.</span> <span class="toc-text">30.什么是IBGP 同步？ 为什么现在的BGP默认都是关闭的？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#31-BGP%E5%8D%8F%E8%AE%AE%E5%92%8CIGP%E5%8D%8F%E8%AE%AE%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9F"><span class="toc-number">32.</span> <span class="toc-text">31.BGP协议和IGP协议的区别？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#32-BGP%E9%80%89%E8%B7%AF%E8%A7%84%E5%88%99%EF%BC%9F"><span class="toc-number">33.</span> <span class="toc-text">32.BGP选路规则？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#33-EBGP-%E9%82%BB%E5%B1%85%E7%9A%84%E9%98%B2%E7%8E%AF%E6%9C%BA%E5%88%B6%EF%BC%9FIBGP%E9%82%BB%E5%B1%85%E7%9A%84%E9%98%B2%E7%8E%AF%E6%9C%BA%E5%88%B6%EF%BC%9F"><span class="toc-number">34.</span> <span class="toc-text">33.EBGP 邻居的防环机制？IBGP邻居的防环机制？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#34-BGP-%E8%B7%AF%E7%94%B1%E5%8F%8D%E5%B0%84%E5%A6%82%E4%BD%95%E9%98%B2%E7%8E%AF%EF%BC%9F"><span class="toc-number">35.</span> <span class="toc-text">34.BGP 路由反射如何防环？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#35-PPP-%E5%8D%8F%E8%AE%AE%E8%BF%87%E7%A8%8B%E6%98%AF%EF%BC%9F"><span class="toc-number">36.</span> <span class="toc-text">35.PPP 协议过程是？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#36-Chap-%E8%AE%A4%E8%AF%81%E8%BF%87%E7%A8%8B%EF%BC%9F"><span class="toc-number">37.</span> <span class="toc-text">36.Chap 认证过程？</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/03/19/1.%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/9.%E7%BD%91%E7%BB%9C%E9%9D%A2%E8%AF%95%E9%A2%98/" title="网络面试题">网络面试题</a><time datetime="2023-03-19T11:48:57.129Z" title="Created 2023-03-19 19:48:57">2023-03-19</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/03/19/1.%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/6.%E4%BA%A4%E6%8D%A2%E6%8A%80%E6%9C%AF%E5%92%8C%E4%B8%89%E5%B1%82%E6%9E%B6%E6%9E%84/" title="交换技术和三层架构">交换技术和三层架构</a><time datetime="2023-03-19T11:48:57.125Z" title="Created 2023-03-19 19:48:57">2023-03-19</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/03/19/1.%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/5.HICP-BGPIPv6/" title="HICP-BGPIPv6">HICP-BGPIPv6</a><time datetime="2023-03-19T11:48:57.120Z" title="Created 2023-03-19 19:48:57">2023-03-19</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/03/19/1.%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/4.HCIP-%E7%BD%91%E7%BB%9C%E7%B1%BB%E5%9E%8BGREOSPF/" title="HCIP-网络类型GREOSPF">HCIP-网络类型GREOSPF</a><time datetime="2023-03-19T11:48:57.116Z" title="Created 2023-03-19 19:48:57">2023-03-19</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/03/19/1.%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/3.HCIA-%E5%8D%8E%E4%B8%BA%E6%A8%A1%E6%8B%9F%E5%99%A8%E5%92%8C%EF%BC%8C%E8%B7%AF%E7%94%B1%EF%BC%8C%E6%8E%A7%E5%88%B6%E5%88%97%E8%A1%A8%EF%BC%8CACL/" title="HCIA-华为模拟器和，路由，控制列表，ACL">HCIA-华为模拟器和，路由，控制列表，ACL</a><time datetime="2023-03-19T11:48:57.111Z" title="Created 2023-03-19 19:48:57">2023-03-19</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By 阿尔托莉雅</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="Scroll To Comments"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><div class="js-pjax"><script>function loadValine () {
+  function initValine () {
+    const valine = new Valine(Object.assign({
+      el: '#vcomment',
+      appId: '',
+      appKey: '',
+      avatar: 'monsterid',
+      serverURLs: '',
+      emojiMaps: "",
+      path: window.location.pathname,
+      visitor: false
+    }, null))
+  }
+
+  if (typeof Valine === 'function') initValine() 
+  else getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js').then(initValine)
+}
+
+if ('Valine' === 'Valine' || !true) {
+  if (true) btf.loadComment(document.getElementById('vcomment'),loadValine)
+  else setTimeout(loadValine, 0)
+} else {
+  function loadOtherComment () {
+    loadValine()
+  }
+}</script><script>function loadDisqus () {
+  var disqus_config = function () {
+    this.page.url = 'https://example.com/2023/03/19/1.%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/9.%E7%BD%91%E7%BB%9C%E9%9D%A2%E8%AF%95%E9%A2%98/'
+    this.page.identifier = '/2023/03/19/1.%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/9.%E7%BD%91%E7%BB%9C%E9%9D%A2%E8%AF%95%E9%A2%98/'
+    this.page.title = '网络面试题'
+  };
+
+  window.disqusReset = () => {
+    DISQUS.reset({
+      reload: true,
+      config: disqus_config
+    })
+  }
+
+  if (window.DISQUS) disqusReset()
+  else {
+    (function() { 
+      var d = document, s = d.createElement('script');
+      s.src = 'https://.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  }
+
+  document.getElementById('darkmode').addEventListener('click', () => {
+    setTimeout(() => window.disqusReset(), 200)
+  })
+}
+
+if ('Valine' === 'Disqus' || !true) {
+  if (true) btf.loadComment(document.getElementById('disqus_thread'), loadDisqus)
+  else loadDisqus()
+} else {
+  function loadOtherComment () {
+    loadDisqus()
+  }
+}
+</script></div><div class="aplayer" data-id="2873491355" data-server="netease" data-type="playlist" data-fixed="true" data-mini="true" data-listFolded="false" data-order="random" data-preload="none" data-autoplay="true" muted></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/metingjs/dist/Meting.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
